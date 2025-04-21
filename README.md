@@ -3,6 +3,54 @@ Vulnerable Machine
 https://dockerlabs.es/ (Muy facil).
 
 
+
+### Herramientas usadas.
+
+-- Despliegue:
+
+    auto_deploy.sh: Script personalizado para levantar la máquina vulnerable desde un archivo '.tar'.
+
+    chmod: Cambia permisos de archivos, necesario para hacer ejecutable el script.
+
+
+-- Reconocimiento:
+
+    ping: Verifica conectividad hacia una IP.
+
+    nmap: Escaneo de puertos abiertos y servicios.
+
+
+-- Análisis web/Esteganografia:
+
+    Navegador web: Para acceder a la página en el puerto 80.
+
+    steghide: Herramienta de esteganografia para extraer datos ocultos de imágenes.
+
+    exiftool: Visualiza metadatos ocultos en archivos multimedia (Usado en imagen JPEG.).
+
+
+-- Ataque de fuerza bruta:
+
+    hydra: Herramienta de fuerza bruta para romper contraseñas (Usada contra SSH).
+
+    rockyou.txt: Diccionario comúnmente usado en ataques de fuerza bruta.
+
+
+-- Acceso al sistema:
+
+    ssh: Cliente para conectarse remotamente por el protocolo 'SSH'.
+
+
+
+-- Escalada de privilegios:
+
+    sudo: Permite ejecutar comandos como otro usuario ('root' en este caso).
+
+    whoami: Confirma el usuario actual con el que se está trabajando.
+
+
+
+
 ### Despliegue.
 
     ./auto_deploy.sh borazuwarahctf.tar
